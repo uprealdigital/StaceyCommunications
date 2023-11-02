@@ -44,12 +44,14 @@ document.addEventListener("DOMContentLoaded", function() {
       console.log("Touched page1_Video");
 
       // video
-      videoEl = document.createElement('a-video'); 
-      videoEl.setAttribute('src', '#page1_Video');
-      videoEl.setAttribute('width', '1');
-      videoEl.setAttribute('height', '0.6666666');
-      videoEl.setAttribute('position', '0 0 0');      
-      page1_entity.appendChild(videoEl);
+      if (videoEl === null) {
+        videoEl = document.createElement('a-video'); 
+        videoEl.setAttribute('src', '#page1_Video');
+        videoEl.setAttribute('width', '1');
+        videoEl.setAttribute('height', '0.6666666');
+        videoEl.setAttribute('position', '0 0 0');      
+        page1_entity.appendChild(videoEl);
+      }
       videoEl.play();
     });    
 
