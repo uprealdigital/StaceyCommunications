@@ -45,6 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
       // video
       if (videoEl === null) {
+        console.log("Creating video 1");
         videoEl = document.createElement('a-video'); 
         videoEl.setAttribute('src', '#page1_Video');
         videoEl.setAttribute('width', '1');
