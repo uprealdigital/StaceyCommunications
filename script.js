@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var videoEl = document.createElement('a-video'); 
     videoEl.setAttribute('width', '1')
     videoEl.setAttribute('height', '0.6666666')
+    videoEl.setAttribute('position', '0 0 0')
     /*
     videoEl.setAttribute('a-video', {
       width: '1',
