@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
     page1_entity.addEventListener("targetLost", event => {
       console.log('Lost Target 1');
-      if (videoEl != null) {
+      if (videoEl !== null) {
         page1_entity.removeChild(videoEl);
         videoEl = null;
       }
