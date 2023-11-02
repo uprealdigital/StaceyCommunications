@@ -53,6 +53,7 @@ document.addEventListener("DOMContentLoaded", function() {
         page1_entity.appendChild(videoEl);
       }
       videoEl.play();
+      console.log("Playing video 1");
     });    
 
     // page 1
