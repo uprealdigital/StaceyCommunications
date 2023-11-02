@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
   
 
   window.addEventListener('click', function () { 
-    document.querySelector('#videoElement').play();
+    document.querySelector('#page1_Video').play();
   });
 
   	//let arSystem;
