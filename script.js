@@ -27,13 +27,8 @@ document.addEventListener("DOMContentLoaded", function() {
   
   	//let arSystem;
 	sceneEl.addEventListener('loaded', function () {
-	  //arSystem = sceneEl.systems["mindar-image-system"];
+	  //arSystem = sceneEl.systems["mindar-image-system"];    
     
-    // video
-    var videoEl = document.createElement('a-video'); 
-    videoEl.setAttribute('width', '1');
-    videoEl.setAttribute('height', '0.6666666');
-    videoEl.setAttribute('position', '0 0 0');
     /*
     videoEl.setAttribute('a-video', {
       width: '1',
@@ -42,10 +37,18 @@ document.addEventListener("DOMContentLoaded", function() {
     */
     //<a-video src="#page1_Video" width="1" height="0.6666666" position="0 0 0"></a-video>
 
+    var videoEl = null;
+
     // detect click event
     page1_touchtoplay.addEventListener("click", event => {
       console.log("Touched page1_Video");
+
+      // video
+      videoEl = document.createElement('a-video'); 
       videoEl.setAttribute('src', '#page1_Video');
+      videoEl.setAttribute('width', '1');
+      videoEl.setAttribute('height', '0.6666666');
+      videoEl.setAttribute('position', '0 0 0');      
       page1_entity.appendChild(videoEl);
       videoEl.play();
     });    
@@ -56,7 +59,10 @@ document.addEventListener("DOMContentLoaded", function() {
     });
     page1_entity.addEventListener("targetLost", event => {
       console.log('Lost Target 1');
-      page1_entity.removeChild(videoEl);
+      if (videoEl != null) {
+        page1_entity.removeChild(videoEl);
+        videoEl = null;
+      }
     });
 
     // page 2
