@@ -59,7 +59,8 @@ document.addEventListener("DOMContentLoaded", function() {
         videoEl.setAttribute('position', '0 0 0');      
         page1_entity.appendChild(videoEl);
       }
-      videoEl.play();
+      //videoEl.play();
+      document.querySelector('#page1_Video').play();
       console.log("Playing video 1");
     });    
 
