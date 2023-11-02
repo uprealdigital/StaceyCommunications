@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+
+    <title>AR Book</title>
+    
+    <link rel="stylesheet" href="/style.css" />
+    
+    <script src="/script.js" defer></script>
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.2/dist/mindar-image-aframe.prod.js"></script>
+    
+  </head>
+  <body>
+     <a-scene mindar-image="imageTargetSrc: https://cdn.glitch.global/0c87fb5b-9a1f-4d02-9287-0c86c8428665/targets.mind?v=1698872633158;" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+       
+        <!-- Assets -->
+        <a-assets timeout="10000">
+          <!-- page1_Image ___ Missing -->
+          
+          <video id="page1_Video" crossorigin="anonymous" autoplay loop="true" src="https://cdn.glitch.global/0c87fb5b-9a1f-4d02-9287-0c86c8428665/Page2_Video_Nursery.mp4?v=1698784936053"></video>
+          <video id="page2_Video" crossorigin="anonymous" autoplay loop="true" src="https://cdn.glitch.global/0c87fb5b-9a1f-4d02-9287-0c86c8428665/Page4_Video_TentCity.mp4?v=1698784940305"></video>
+          <video id="page3_Video" crossorigin="anonymous" autoplay loop="true" src="https://cdn.glitch.global/0c87fb5b-9a1f-4d02-9287-0c86c8428665/Page6_Video_PostProduction.mp4?v=1698784945491"></video>  
+          <video id="page4_Video" crossorigin="anonymous" autoplay loop="true" src="https://cdn.glitch.global/0c87fb5b-9a1f-4d02-9287-0c86c8428665/Page8_Video_ExtractionRoom.mp4?v=1698784949064"></video>  
+          <video id="page5_Video" crossorigin="anonymous" autoplay loop="true" src="https://cdn.glitch.global/0c87fb5b-9a1f-4d02-9287-0c86c8428665/Page10_Video_Packaging.mp4?v=1698784953412"></video>
+          <video id="page6_Video" crossorigin="anonymous" autoplay loop="true" src="https://cdn.glitch.global/0c87fb5b-9a1f-4d02-9287-0c86c8428665/Page12_Video_RanaFinalVision.mp4?v=1698784957436"></video>                    
+          
+          <!--
+          <video id="page2_Video" autoplay loop="true" src="https://cdn.glitch.global/0c87fb5b-9a1f-4d02-9287-0c86c8428665/Page2_Video_Nursery.mp4?v=1698784936053"></video>
+          <img   id="page3_Image" src="https://cdn.glitch.global/0c87fb5b-9a1f-4d02-9287-0c86c8428665/Page3_Image_Sandra.jpg?v=1698785125130">       
+          <video id="page4_Video" autoplay loop="true" src="https://cdn.glitch.global/0c87fb5b-9a1f-4d02-9287-0c86c8428665/Page4_Video_TentCity.mp4?v=1698784940305"></video>
+          <img   id="page5_Image" src="https://cdn.glitch.global/0c87fb5b-9a1f-4d02-9287-0c86c8428665/Page5_Image_LeadEPSUTechJordan.png?v=1698785157049">     
+          <video id="page6_Video" autoplay loop="true" src="https://cdn.glitch.global/0c87fb5b-9a1f-4d02-9287-0c86c8428665/Page6_Video_PostProduction.mp4?v=1698784945491"></video>  
+          <img   id="page7_Image" src="https://cdn.glitch.global/0c87fb5b-9a1f-4d02-9287-0c86c8428665/Page7_Image_LeadFlowerChildSteve.png?v=1698785212429">    
+          <video id="page8_Video" autoplay loop="true" src="https://cdn.glitch.global/0c87fb5b-9a1f-4d02-9287-0c86c8428665/Page8_Video_ExtractionRoom.mp4?v=1698784949064"></video>  
+          <img   id="page9_Image" src="https://cdn.glitch.global/0c87fb5b-9a1f-4d02-9287-0c86c8428665/Page9_Image_Tony.jpg?v=1698785235410">    
+          <video id="page10_Video" autoplay loop="true" src="https://cdn.glitch.global/0c87fb5b-9a1f-4d02-9287-0c86c8428665/Page10_Video_Packaging.mp4?v=1698784953412"></video>
+          <img   id="page11_Image" src="https://cdn.glitch.global/0c87fb5b-9a1f-4d02-9287-0c86c8428665/Page11_Image_Sarah.jpg?v=1698785287529">  
+          <video id="page12_Video" autoplay loop="true" src="https://cdn.glitch.global/0c87fb5b-9a1f-4d02-9287-0c86c8428665/Page12_Video_RanaFinalVision.mp4?v=1698784957436"></video>
+
+          <a-image src="#page5_Image" width="0.6635254" height="1" position="0 0 0"></a-image>
+
+          -->
+          
+          <!--<a-video src="#page1_Video" width="1" height="0.6666666" position="0 0 0"></a-video>-->
+          
+          <!-- page13_Image ___ Missing -->
+        </a-assets>
+       
+       
+       
+        <!-- Camera -->
+        <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+       
+        <!-- Page 1 -->
+        <a-entity id="page1_entity" mindar-image-target="targetIndex: 0">          
+          <a-plane color="blue" opaciy="0.5" position="0 0 0" height="0.6666666" width="1" rotation="0 0 0"></a-plane>
+        </a-entity>              
+
+        <!-- Page 2 -->
+        <a-entity id="page2_entity" mindar-image-target="targetIndex: 1">
+          <a-plane color="red" opaciy="0.5" position="0 0 0" height="0.6666666" width="1" rotation="0 0 0"></a-plane>
+        </a-entity>    
+
+        <!-- Page 3 -->
+        <a-entity id="page3_entity" mindar-image-target="targetIndex: 2">
+        </a-entity>   
+
+        <!-- Page 4 -->
+        <a-entity id="page4_entity" mindar-image-target="targetIndex: 3">
+        </a-entity>    
+
+        <!-- Page 5 -->
+        <a-entity id="page5_entity" mindar-image-target="targetIndex: 4">
+        </a-entity>  
+
+        <!-- Page 6 -->
+        <a-entity id="page6_entity" mindar-image-target="targetIndex: 5">
+        </a-entity>              
+       
+      </a-scene>      
+  </body>
+</html>
