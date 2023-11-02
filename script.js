@@ -27,7 +27,8 @@ document.addEventListener("DOMContentLoaded", function() {
   
 
   window.addEventListener('click', function () { 
-    document.querySelector('#page1_Video').get(0).play();
+    document.querySelector('#page1_Video').get(0).currentTime = 0;
+    document.querySelector('#page1_Video').play();
   });
 
   	//let arSystem;
@@ -56,7 +57,8 @@ document.addEventListener("DOMContentLoaded", function() {
         videoEl.setAttribute('src', '#page1_Video');
         videoEl.setAttribute('width', '1');
         videoEl.setAttribute('height', '0.6666666');
-        videoEl.setAttribute('position', '0 0 0');      
+        videoEl.setAttribute('position', '0 0 0');  
+        videoEl.setAttribute('play', 'true');  
         page1_entity.appendChild(videoEl);
       }
       //videoEl.play();
