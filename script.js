@@ -25,6 +25,11 @@ document.addEventListener("DOMContentLoaded", function() {
 	  console.log("AR failed to start")
 	});
   
+
+  window.addEventListener('click', function () { 
+    document.querySelector('#videoElement').play();
+  });
+
   	//let arSystem;
 	sceneEl.addEventListener('loaded', function () {
 	  //arSystem = sceneEl.systems["mindar-image-system"];    
@@ -47,6 +52,7 @@ document.addEventListener("DOMContentLoaded", function() {
       if (videoEl === null) {
         console.log("Creating video 1");
         videoEl = document.createElement('a-video'); 
+        videoEl.setAttribute('id', 'videoElement');
         videoEl.setAttribute('src', '#page1_Video');
         videoEl.setAttribute('width', '1');
         videoEl.setAttribute('height', '0.6666666');
