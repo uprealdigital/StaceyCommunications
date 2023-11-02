@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
   
 
   window.addEventListener('click', function () { 
-    document.querySelector('#page1_Video').get(0).currentTime = 0;
+    document.querySelector('#page1_Video').currentTime = 0;
     document.querySelector('#page1_Video').play();
   });
 
@@ -62,8 +62,8 @@ document.addEventListener("DOMContentLoaded", function() {
         page1_entity.appendChild(videoEl);
       }
       //videoEl.play();
-      document.querySelector('#page1_Video').get(0).currentTime = 0;
-      document.querySelector('#page1_Video').get(0).play();
+      document.querySelector('#page1_Video').currentTime = 0;
+      document.querySelector('#page1_Video').play();
       console.log("Playing video 1");
     });    
 
